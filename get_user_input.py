@@ -1,10 +1,9 @@
-# function that allows users to input student data to return a DataFrame for the prediction model
-
 import pandas as pd
 
 
 def get_user_input():
-    # collect user input for each feature with input validation
+    """Allows users to input student data to return a DataFrame for the prediction model."""
+    # Collect user input for each feature with input validation
     while True:
         try:
             g1 = int(input("Enter a value for Grade 1 (0-20): "))
@@ -70,7 +69,7 @@ def get_user_input():
         except ValueError:
             print("Invalid input. Please enter an integer from 1 to 5. If you are unsure, please enter 3.")
 
-    # create a dictionary of user inputs
+    # Create a dictionary of user inputs
     user_input_dict = {"G1": g1,
                        "G2": g2,
                        "studytime": study_time,
@@ -79,7 +78,7 @@ def get_user_input():
                        "famrel": family_rel
                        }
 
-    # create a DataFrame from the user input dictionary
+    # Create a DataFrame from the user input dictionary
     user_df = pd.DataFrame([user_input_dict])
 
     return user_df

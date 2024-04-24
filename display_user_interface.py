@@ -1,7 +1,5 @@
-# function for displaying user interface
-
 def display_user_interface():
-    # user interface, adapted from my C950 task 1 project
+    """Function for displaying user interface."""
     print("************************************************")
     print("Welcome to the Student Outcome Prediction Model!")
     print("Please Select An Option:")
